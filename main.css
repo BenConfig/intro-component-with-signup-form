@@ -53,19 +53,18 @@ main { padding: 5.6875rem 1.5rem 4.3125rem; }
 
 .paragraph {
     margin-bottom: 3.9325rem;
-    opacity: .8;
 }
 
 .banner {
     font: inherit;
     padding: 1.1875rem 3rem 1.0625rem;
     margin-bottom: 1.5rem;
-    color: hsla(var(--clr-white), .8);
+    color: hsla(var(--clr-white));
     background: hsl(var(--clr-accent));
 }
 
 .bold-text {
-    font-weight: 500;
+    font-weight: 600;
     color: hsl(var(--clr-white));
 }
 

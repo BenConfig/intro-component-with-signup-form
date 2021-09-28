@@ -11,6 +11,9 @@ FORM_INPUTS.forEach( input => {
         const FIELD_NAME = e.target.previousElementSibling.textContent;
         const ERROR_MESSAGE = e.target.nextElementSibling;
 
+        // Add aria-invalid="true"
+        e.target.setAttribute('aria-invalid', 'true');
+
         // Add 'error' class to parent of input field
         PARENT_EL.classList.add('error');
 
@@ -40,8 +43,12 @@ FORM_INPUTS.forEach( input => {
 // Remove 'error' styles when user attempts to correct error
 FORM_INPUTS.forEach( input => {
     input.addEventListener('input', (e) => {
-      const PARENT_EL = e.target.parentElement;
+        const PARENT_EL = e.target.parentElement;
 
-      PARENT_EL.classList.remove('error');
+        // Remove aria-invalid="true"
+        e.target.removeAttribute('aria-invalid');
+
+        // Remove 'error' styles from parent of input field
+        PARENT_EL.classList.remove('error');
    });
 });

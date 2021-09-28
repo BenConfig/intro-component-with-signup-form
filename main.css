@@ -176,7 +176,7 @@ main { padding: 5.6875rem 1.5rem 4.3125rem; }
 
 .link:hover { text-decoration: underline; }
 
-@media only screen and (min-width: 70.5em) {
+@media only screen and (min-width: 60em) {
     body {
         display: flex;
         background-image: url('images/bg-intro-desktop.png');
@@ -186,7 +186,7 @@ main { padding: 5.6875rem 1.5rem 4.3125rem; }
         display: grid;
         grid-template-columns: 1fr 1.1fr;
         align-items: center;
-        column-gap: 4.75rem;
+        column-gap: min(5vw, 4.75rem);
         padding: 3rem 5rem;
         margin: auto;
         max-width: 79.5rem;

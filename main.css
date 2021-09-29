@@ -174,7 +174,8 @@ main { padding: 5.6875rem 1.5rem 4.3125rem; }
     text-decoration: none;
 }
 
-.link:hover { text-decoration: underline; }
+.link:hover,
+.link:focus { text-decoration: underline; }
 
 @media only screen and (min-width: 60em) {
     body {

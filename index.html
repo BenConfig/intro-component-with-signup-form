@@ -30,6 +30,7 @@
         <h2 class="banner"><strong class="bold-text">Try it free 7 days</strong> then $20/mo. thereafter</h2>
 
         <form class="form" action="#">
+          <p class="sr-only" aria-live="polite"></p>
 
           <div class="form-control">
             <label class="sr-only" for="first-name">First Name</label>
@@ -41,8 +42,7 @@
             minlength="1"
             pattern="([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+"
             maxlength="100"
-            required
-            aria-describedby="first-name-error">
+            required>
             <p class="error-message" id="first-name-error">Error message</p>
           </div>
 
@@ -56,8 +56,7 @@
             minlength="1"
             pattern="([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+"
             maxlength="100"
-            required
-            aria-describedby="last-name-error">
+            required>
             <p class="error-message" id="last-name-error">Error message</p>
           </div>
 
@@ -70,8 +69,7 @@
             placeholder="Email Address"
             pattern="[^ ]+@[^ ]+\.[a-z]{2,3}"
             maxlength="320"
-            required
-            aria-describedby="email-error">
+            required>
             <p class="error-message" id="email-error">Error message</p>
           </div>
 
@@ -85,8 +83,7 @@
             pattern="[A-Za-z0-9]+"
             minlength="8"
             maxlength="16"
-            required
-            aria-describedby="password-error">
+            required>
             <p class="error-message" id="password-error">Error message</p>
           </div>
 

@@ -21,7 +21,7 @@ Users should be able to:
 ![](screenshot-desktop.png)
 
 
-### Built with
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -29,7 +29,7 @@ Users should be able to:
 - Mobile-first workflow
 - JS
 
-### What I learned
+## What I learned
 
 My understanding of JavaScript has improved greatly as a result of completing this project. I think my code is very concise for what it achieves.
 
@@ -54,10 +54,14 @@ It targets the parent to apply the 'error' styles, the previous sibling (the lab
 
 
 
-### Continued development
+## Continued development
 
 I am fairly good with plain CSS, but want to practise a bit more with SASS and learn to use a framework like Bootstrap, however I think I need to take on larger projects which warrant the use of these.
 
-### Useful resources
+## Useful resources
 
 Stack Overflow gave me the regex patterns for the different input fields.
+
+## Acknowledgments
+
+Credit to [Raymart Pamplona](https://www.frontendmentor.io/profile/pikamart/solutions) for helping me make this form more accessible using the `aria-invalid`, `aria-describedby` and `aria-live` attributes.

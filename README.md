@@ -33,7 +33,7 @@ Users should be able to:
 
 My understanding of JavaScript has improved greatly as a result of completing this project. I think my code is very concise for what it achieves.
 
-I am particularly pleased with the way I used JavaScript to target other HTML elements in relation to the invalid input field:
+I am particularly pleased with the way I used JavaScript to target other HTML elements in relation to the invalid `input` field:
 
 ```js
 FORM_INPUTS.forEach( input => {
@@ -50,7 +50,7 @@ FORM_INPUTS.forEach( input => {
 });
 ```
 
-It targets the parent to apply the 'error' styles, the previous sibling (the label which is only visible to screen readers) to get the field name (used in the error message), and the next sibling which displays the error message.
+It targets the parent to apply the 'error' styles, the previous sibling (the `label` which is only visible to screen readers) to get the field name (used in the error message), and the next sibling which displays the error message.
 
 
 
@@ -60,7 +60,7 @@ I am fairly good with plain CSS, but want to practise a bit more with SASS and l
 
 ## Useful resources
 
-Stack Overflow gave me the regex patterns for the different input fields.
+Stack Overflow gave me the regex patterns for the different `input` fields.
 
 ## Acknowledgments
 

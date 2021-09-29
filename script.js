@@ -1,18 +1,30 @@
+const FORM = document.querySelector('.form');
 const FORM_INPUTS = document.querySelectorAll('.form-input');
 
-// On form submission, listen for any input fields that do not match specified regex (see HTML 'pattern' attribute)
+// Listen for any input fields that do not match specified regex (see HTML 'pattern' attribute)
 FORM_INPUTS.forEach( input => {
     input.addEventListener('invalid', (e) => {
         // Remove default error messages supplied by browser
         e.preventDefault();
+
+        // Get HTML element containing aria-live attribute...
+        const FORM_MESSAGE = FORM.firstElementChild;
+
+        // and add text to show the form submitted is invalid
+        if (FORM_MESSAGE.textContent === '') {
+            FORM_MESSAGE.textContent = 'Form is invalid, check for inputs'
+        }
 
         // Get HTML elements in relation to input field
         const PARENT_EL = e.target.parentElement;
         const FIELD_NAME = e.target.previousElementSibling.textContent;
         const ERROR_MESSAGE = e.target.nextElementSibling;
 
-        // Add aria-invalid="true"
+        // Add aria-invalid="true" to input field
         e.target.setAttribute('aria-invalid', 'true');
+
+        // Add aria-describedby attribute to input field
+        e.target.setAttribute('aria-describedby', FIELD_NAME.toLowerCase().replace(' ', '-') + '-error');
 
         // Add 'error' class to parent of input field
         PARENT_EL.classList.add('error');
@@ -45,10 +57,24 @@ FORM_INPUTS.forEach( input => {
     input.addEventListener('input', (e) => {
         const PARENT_EL = e.target.parentElement;
 
-        // Remove aria-invalid="true"
+        // Remove aria-invalid="true" from input field
         e.target.removeAttribute('aria-invalid');
+
+        // Remove aria-describedby attribute from input field
+        e.target.removeAttribute('aria-describedby');
 
         // Remove 'error' styles from parent of input field
         PARENT_EL.classList.remove('error');
    });
 });
+
+// This only runs once all input fields are valid
+FORM.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Get HTML element containing aria-live attribute...
+    const FORM_MESSAGE = FORM.firstElementChild;
+
+    // and add text to show the form submitted is valid
+    FORM_MESSAGE.textContent = 'Form submission successful'
+})
